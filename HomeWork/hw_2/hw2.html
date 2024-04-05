@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    test
+    <script>
+        // Задание 1
+        /*
+            Создать переменные num1, num2 которые пользователь вводит с клавиатуры
+            Проверьте, что переменная num1 равна или меньше 1, а переменная num2 больше или равна 3.
+        */
+
+        let num1 = Number(prompt('Введите первое число'));
+        let num2 = Number(prompt('Введите второе число'));
+
+        if (num1 === 1 || num1 < 1) {
+            console.log(`Переменная ${num1} меньше или равна 1`);
+        } else {
+            console.log(`Переменная ${num1} больше 1`);
+        }
+
+        if (num2 > 3 || num2 ===3) {
+            console.log(`Переменная ${num2} больше или равна 3`);
+        } else {
+            console.log(`Переменная ${num2} меньше 3`);
+        }
+
+        // Задание 2
+        /*
+        Перепишите код к тернарному оператору
+
+            let test = true;
+            if (test === true) {
+            console.log('+++');
+            } else {
+            console.log('---');
+            }
+        */
+
+        let test = true;
+        (test === true) ? console.log('+++') : console.log('---');
+
+        // Задание 3
+        /*
+            В переменной day лежит какое-то число из интервала от 1 до 31. Определите в какую декаду месяца попадает это число (в первую, вторую или третью).
+        */
+
+        let day = Math.floor(Math.random() * (32 - 1)) + 1;
+        if (day > 0 && day < 11) {
+            console.log(`Число ${day} попадает в первую декаду месяца`);
+        } else if (day > 10 && day < 21) {
+            console.log(`Число ${day} попадает во вторую декаду месяца`);
+        } else {
+            console.log(`Число ${day} попадает в третью декаду месяца`);
+        }
+
+        // Задание 4
+        /*
+            (Для решения задания вам потребуется оператор остаток от деления %, например 10%3 === 1 , десять разделить на 3, остаток 1, второй пример 7 % 5, тут остаток от деления будет 2, ну и 3 пример это 14 % 10 === 4, остаток от деления на 10 будет равен 4)
+
+            Необходимо от пользователя получить число.
+            Необходимо вывести разряды числа, а именно: количество сотен, десятков и единиц.
+        */
+
+        let number = Number(prompt('Введите число')) 
+        let hundreds = Math.trunc(number / 100);
+        let dozens = Math.trunc(number % 100 / 10);
+        let pieces = Math.trunc(number % 10);
+        console.log(`В числе ${number} количесвто сотен: ${hundreds},
+        десятков: ${dozens}, единиц: ${pieces}`);
+    </script>
+
+
+</body>
+
+</html>

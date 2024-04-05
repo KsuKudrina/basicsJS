@@ -9,17 +9,23 @@
 
 <body>
     <script>
-        let name = "Ksu"
-        let family = "Kudrina"
-        
+        let test1 = Number(prompt('Введите число'));
+        let test2 = Number(prompt('Введите число'));
 
-        let text = "java"
-        let scrtext = "Script"
-         console.log(text + scrtext);
+        (test1 === test2) ? console.log(true) : console.log(false);
 
-         console.log("hello " + "world");
+        if (test1 < test2) {
+            console.log(`${test1} минимальное число`);
+        } else if (test2 < test1) {
+            console.log(`${test2} минимальное число`);
+        } else {
+            console.log(`Числа равны`);
+        }
+
+        (test1 > 0 && test1 < 15) ? console.log('Чило подходит') : console.log('Не то!');
+ 
     </script>
-    <script src="script.js"></script>
+
 </body>
 
 </html>
