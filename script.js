@@ -1,32 +1,91 @@
 
-let age = prompt("Ваш возраст: ");
-console.log(`Вам ${age} лет`);
+function hello(userName, userLastName, age) {
+    console.log(`Привет ${userName} ${userLastName} с возрастом ${age}`);
+}
 
-let userName = prompt("Ваше имя: ")
-console.log(`Добро пожаловать на сайт ${userName}`);
+function square(num) {
+    // let quare = Math.pow(num, 2)
+    let quare = num ** 2;
+    console.log(`Квадрат числа ${num} равен ${quare}`);
+}
 
-let a = '2';
-a = Number(a);
-let b = '3';
-b = Number(b);
+function positive(num) {
+    if (num >= 0) {
+        console.log('+++');
+    } else {
+        console.log('---');
+    }
+}
 
-console.log(a + b);
+function sum(arg1, arg2, arg3) {
+    let argSum = arg1 + arg2 + arg3;
+    console.log(argSum);
+}
 
-let num1 = Number(prompt('Введите первое число'))
+function func(num = 5) {
+    console.log(num * num);
+}
 
-let num2 = Number(prompt('Введите первое число'))
+function sqrtNum(num) {
+    result = Math.sqrt(num);
+    console.log(result);
+    return result;
+}
 
-console.log(`Сумма чисел равна: ${num1 + num2}`);
-console.log(`Разность чисел равна: ${num1 - num2}`);
-console.log(`Произведение чисел равно: ${num1 * num2}`);
-console.log(`Частное чисел равно: ${num1 / num2}`);
-console.log(`Остаток от деления чисел равен: ${num1 % num2}`);
+function minNum(a, b) {
+    if (a < b) {
+        console.log(`Минимальное число ${a}`);
+    } else if (b < a) {
+        console.log(`Минимальное число ${b}`);
+    } else {
+        console.log(`Числа равны`);
+    }
 
-let num = Number(prompt('Введите число'));
-if (num === 5) {
-    console.log('Число равно 5');
-} else if (num < 5) {
-    console.log('Число меньше 5');
-} else {
-    console.log('Число больше 5');
+}
+
+function week(arg) {
+    switch (arg) {
+        case 1:
+            console.log('Понедельник');
+            break;
+        case 2:
+            console.log('Вторник');
+            break;
+        case 3:
+            console.log('Среда');
+            break;
+        case 4:
+            console.log('Четверг');
+            break;
+        case 5:
+            console.log('Пятница');
+            break;
+        case 6:
+            console.log('Суббота');
+            break;
+        case 7:
+            console.log('Воскресенье');
+            break;
+        default:
+            console.log('Введите число от 1 до 7');
+            break;
+    }
+
+}
+
+function greeting(name) {
+
+    let time = Math.floor(Math.random() * (24 - 0));
+    console.log(`Время ${time}`);
+    if (0 <= time && time < 4) {
+        console.log(`Доброй ночи ${name}`);
+    } else if (3 < time && time < 11) {
+        console.log(`Доброе утро ${name}`);
+    } else if (10 < time && time < 16) {
+        console.log(`Добрый день ${name}`);
+    } else if (15 < time && time <= 23) {
+        console.log(`Добрый вечер ${name}`);
+    } else {
+
+    }
 }
