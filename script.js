@@ -1,91 +1,117 @@
 
-function hello(userName, userLastName, age) {
-    console.log(`Привет ${userName} ${userLastName} с возрастом ${age}`);
+const numArr = [2, 5, 9, 15, 1, 4];
+
+for (let i = 0; i < numArr.length; i++) {
+    if (numArr[i] > 3 && numArr[i] < 10) {
+        console.log(numArr[i]);
+    }
+    
+}
+console.log('-----------------------------');
+
+let sum = 0;
+for (let i = 2; i <= 100; i++) {
+    if (i % 2 === 0) {
+        sum = sum + i;
+    }
+}
+console.log(sum);
+
+console.log('-----------------------------');
+
+const array2 = [2, 5, 9, 3, 1, 4];
+let elSum = 0;
+for (let i = 0; i < array2.length; i++) {
+    elSum += array2[i]; 
+}
+console.log(elSum);
+
+console.log('-----------------------------');
+
+let str = '-';
+
+for (let i = 1; i <= 9; i++) {
+    str +=  i + '-';
+    console.log(str);
 }
 
-function square(num) {
-    // let quare = Math.pow(num, 2)
-    let quare = num ** 2;
-    console.log(`Квадрат числа ${num} равен ${quare}`);
-}
+console.log('-----------------------------');
 
-function positive(num) {
-    if (num >= 0) {
-        console.log('+++');
-    } else {
-        console.log('---');
+const array3 = [2, 5, 9, 0, 3, 1, 4];
+for (let i = 0; i < array3.length; i++) {
+    if(array3[i] === 0){
+        break;
+    }else{
+        console.log(array3[i]);
     }
 }
 
-function sum(arg1, arg2, arg3) {
-    let argSum = arg1 + arg2 + arg3;
-    console.log(argSum);
+console.log('-----------------------------');
+
+
+const arr = [1, 2, 3];
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
 }
 
-function func(num = 5) {
-    console.log(num * num);
+// console.log(arr.length);
+
+arr.push(4, 5);
+
+console.log(arr);
+
+for (let i = 0; i < arr.length; i++) {
+    arr[i]++;
 }
+console.log(arr);
 
-function sqrtNum(num) {
-    result = Math.sqrt(num);
-    console.log(result);
-    return result;
+console.log('-----------------------------');
+
+const array = ['a', 'b', 'c', 'd', 'e'];
+console.log(array);
+
+array[0] = 1;
+array[1] = 2;
+array[2] = 3;
+
+console.log(array);
+console.log(array.length);
+
+array.pop();
+array.pop();
+console.log(array);
+console.log('-----------------------------');
+
+const arr2 = [];
+arr2[3] = 'a';
+arr2[8] = 'b';
+
+console.log(arr2.length);
+console.log('-----------------------------');
+
+// for (let i = 11; i <= 33; i++) {
+//     console.log(i);
+// }
+
+// for (let i = 1; i <= 99; i++) {
+//     if (i % 2 === 0) {
+//         continue;
+//     } else {
+//         console.log(i);
+//     }
+// }
+
+// for (let i = 100; i > 0; i--) {
+//     console.log(i);
+// }
+let num = 20;
+let count = 0;
+
+while (num < 1000) {
+    num = num * 3;
+    count++;
+    console.log(num);
 }
+console.log(count);
 
-function minNum(a, b) {
-    if (a < b) {
-        console.log(`Минимальное число ${a}`);
-    } else if (b < a) {
-        console.log(`Минимальное число ${b}`);
-    } else {
-        console.log(`Числа равны`);
-    }
-
-}
-
-function week(arg) {
-    switch (arg) {
-        case 1:
-            console.log('Понедельник');
-            break;
-        case 2:
-            console.log('Вторник');
-            break;
-        case 3:
-            console.log('Среда');
-            break;
-        case 4:
-            console.log('Четверг');
-            break;
-        case 5:
-            console.log('Пятница');
-            break;
-        case 6:
-            console.log('Суббота');
-            break;
-        case 7:
-            console.log('Воскресенье');
-            break;
-        default:
-            console.log('Введите число от 1 до 7');
-            break;
-    }
-
-}
-
-function greeting(name) {
-
-    let time = Math.floor(Math.random() * (24 - 0));
-    console.log(`Время ${time}`);
-    if (0 <= time && time < 4) {
-        console.log(`Доброй ночи ${name}`);
-    } else if (3 < time && time < 11) {
-        console.log(`Доброе утро ${name}`);
-    } else if (10 < time && time < 16) {
-        console.log(`Добрый день ${name}`);
-    } else if (15 < time && time <= 23) {
-        console.log(`Добрый вечер ${name}`);
-    } else {
-
-    }
-}
