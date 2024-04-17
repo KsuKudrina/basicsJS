@@ -131,7 +131,8 @@
         ];
         const productNew = product.filter(item => item.photos ? item.photos.length: undefined);
         console.log(productNew);
-
+        product.sort((firstVal, secondVal) => firstVal.price - secondVal.price);
+        console.log(product);
         console.log('------ Задание 5 ------');
         /*
             Дано 2 массива 
