@@ -1,0 +1,17 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "seminar2.js",
+  "scripts": {
+    "start": "node seminar2.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "ksu-hw_quadratic_equation": "^1.0.0",
+    "number-precision": "^1.6.0"
+  },
+  "description": ""
+}
