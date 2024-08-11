@@ -35,3 +35,16 @@ navigationEl.forEach((nav, index)=> {
         imageSwitch(currentIndex);
     });
 });
+
+function carusel() {
+    setTimeout(() => {
+        currentIndex++;
+    if (currentIndex >= sliderItemsEl.length) {
+        currentIndex = 0;
+    }
+    imageSwitch(currentIndex);
+    carusel();
+    }, 2000);
+}
+
+carusel();
