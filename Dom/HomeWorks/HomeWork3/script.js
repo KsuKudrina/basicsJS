@@ -4,7 +4,7 @@ const authorPhoto = document.querySelector('.author-photo');
 const likeCounter = document.querySelector('.like-counter');
 const btnlike = document.querySelector('.btn-like');
 
-const accessKey = 'jPFCVlkS-zkdXFms-jb37JGAEIDoFBFPXGK55hEYIgs'
+const accessKey = 'TOKEN'
 let page = Math.floor(Math.random() * 100) + 1;
 
 const fetchPhotos = async () => {
